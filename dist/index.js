@@ -1,9 +1,9 @@
-"use strict";var j=function(i,a){return function(){try{return a||i((a={exports:{}}).exports,a),a.exports}catch(o){throw (a=0, o)}};};var O=j(function(L,p){
-var k=require('@stdlib/ndarray-base-assert-is-row-major/dist');function z(i,a,o,q,u,g,R,s,y,l,n,t){var c,h,e,x,m,v,w,r,f;if(i<=0||a<=0)return-1;if(k([q,u])){for(e=a,x=i,f=x-1;f>=0;f--){for(m=g+f*q+(e-1)*u,w=y+(e-1)*s,r=e-1;r>=0&&o[m]===R[w];r--)m-=u,w-=s;if(r===-1)return f}return-1}for(e=i,x=a,c=-q,h=e*q-u,v=t,r=0;r<e;r++)l[v]=1,v+=n;for(m=g+(e-1)*q+(x-1)*u,w=y+(x-1)*s,f=x-1;f>=0;f--){for(v=t+(e-1)*n,r=e-1;r>=0;r--)o[m]!==R[w]&&(l[v]=0),m+=c,v-=n;m+=h,w-=s}for(v=t+(e-1)*n,r=e-1;r>=0&&l[v]!==1;r--)v-=n;return r}p.exports=z
-});var S=j(function(D,F){
-var B=require('@stdlib/blas-base-assert-is-layout/dist'),G=require('@stdlib/ndarray-base-assert-is-row-major-string/dist'),H=require('@stdlib/ndarray-base-assert-is-column-major-string/dist'),I=require('@stdlib/strided-base-stride2offset/dist'),E=require('@stdlib/math-base-special-fast-max/dist'),d=require('@stdlib/error-tools-fmtprodmsg/dist'),J=O();function K(i,a,o,q,u,g,R,s,y){var l,n,t;if(!B(i))throw new TypeError(d('2f7Fx',i));if(G(i)?t=o:t=a,u<E(1,t))throw new RangeError(d('2f7IR',E(1,t),u));return H(i)?(l=1,n=u):(l=u,n=1),J(a,o,q,l,n,0,g,R,I(o,R),s,y,I(a,y))}F.exports=K
-});var C=j(function(N,_){
-var P=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),V=S(),Q=O();P(V,"ndarray",Q);_.exports=V
-});var U=require("path").join,Y=require('@stdlib/utils-try-require/dist'),Z=require('@stdlib/assert-is-error/dist'),$=C(),b,T=Y(U(__dirname,"./native.js"));Z(T)?b=$:b=T;module.exports=b;
+"use strict";var O=function(n,a){return function(){try{return a||n((a={exports:{}}).exports,a),a.exports}catch(o){throw (a=0, o)}};};var b=O(function(L,h){
+var z=require('@stdlib/ndarray-base-assert-is-row-major/dist');function B(n,a,o,l,u,j,y,s,g,q,i,t){var x,d,e,w,m,v,R,r,f;if(n<=0||a<=0)return-1;if(z([l,u])){for(e=a,w=n,f=w-1;f>=0;f--){for(m=j+f*l+(e-1)*u,R=g+(e-1)*s,r=e-1;r>=0&&o[m]===y[R];r--)m-=u,R-=s;if(r===-1)return f}return-1}for(e=n,w=a,x=-l,d=e*l-u,v=t,r=0;r<e;r++)q[v]=1,v+=i;for(m=j+(e-1)*l+(w-1)*u,R=g+(w-1)*s,f=w-1;f>=0;f--){for(v=t+(e-1)*i,r=e-1;r>=0;r--)o[m]!==y[R]&&(q[v]=0),m+=x,v-=i;m+=d,R-=s}for(v=t+(e-1)*i,r=e-1;r>=0&&q[v]!==1;r--)v-=i;return r}h.exports=B
+});var S=O(function(M,F){
+var C=require('@stdlib/blas-base-layout-resolve-str/dist'),G=require('@stdlib/ndarray-base-assert-is-row-major-string/dist'),p=require('@stdlib/strided-base-stride2offset/dist'),I=require('@stdlib/math-base-special-fast-max/dist'),E=require('@stdlib/error-tools-fmtprodmsg/dist'),H=b();function J(n,a,o,l,u,j,y,s,g){var q,i,t,x;if(x=C(n),x===null)throw new TypeError(E('2f7Fx',n));if(G(x)?(t=o,q=u,i=1):(t=a,q=1,i=u),u<I(1,t))throw new RangeError(E('2f7IR',I(1,t),u));return H(a,o,l,q,i,0,j,y,p(o,y),s,g,p(a,g))}F.exports=J
+});var T=O(function(D,_){
+var K=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),V=S(),P=b();K(V,"ndarray",P);_.exports=V
+});var Q=require("path").join,U=require('@stdlib/utils-try-require/dist'),Y=require('@stdlib/assert-is-error/dist'),Z=T(),c,k=U(Q(__dirname,"./native.js"));Y(k)?c=Z:c=k;module.exports=c;
 /** @license Apache-2.0 */
 //# sourceMappingURL=index.js.map
